@@ -3,6 +3,12 @@ m=3;
 
 T=300;
 N=200;
+
+%{
+T=50;
+N=100;
+%}
+
 interval = 10;
 error = zeros(T/interval,1);
 
