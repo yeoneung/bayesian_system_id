@@ -34,45 +34,31 @@ $A={\left\lbrack \matrix{1 & 0 & 0 & 0 & 0 \cr 1 & 0 & 1 & 0 & -1  \cr 0 & 0 & -
 $B={\left\lbrack \matrix{0 & 0 & 0 & 0 & 0 \cr 1 & 0 & 0 & 0 & 0  \cr 0 & 0 & 0 & 0 & 0 \cr 1 & 0 & 1 & 0 & 0 \cr 1 & 0 & 0 & 0 & 0 } \right\rbrack}$
 
 ### Type of system noise
-Three diffrent types of system noise is considered to test the performance of the algorithm.
+Three different types of system noise are considered to test the performance of the algorithm.
 (i) Gaussian
 (ii) Gaussian mixture
 (iii) Asymmetric noise.
 
 For (i) and (ii), built-in random generators in Matlab is used while we synthesize (iii) based on Langevin Markov Chain Monte Carlo (MCMC).
 
-# Folders
+# Running
 
 #### - Asymmetric noise generators
 Running 'ULA_asymmetric_1D.m' generates a set of synthetic asymmetric noises based on Lagnevin Markov Chain Monte Carlo. 
 This file will generate a set of 1000000 independent noises and save it 'asymmetric_noise_1D.csv'. 
+
+#### - Ours
+
 
 #### - LSE
 We compare the performance of our algorithm with those proposed in [On the Sample Complexity of the Linear Quadratic Regulator](
 https://link.springer.com/article/10.1007/s10208-019-09426-y). 
 Running each m-file will provide an error for estimation corresponding to the type of noise indicated in the filename.
 
-For example, running 'bayesian_system_id/LSE/Gaussian/Gaussian_3D.m' will 
+For example, running 'bayesian_system_id/LSE/Gaussian/Gaussian_3D.m' will create a plot for the error between the true and estimated parameters for the linear system with Gaussian system noise.
 
-#### - Ours
 
-This file computes optimal control and the state trajectories generated based on our new algorithm.
 
-Images of plots will be saved in the current directory. 
-
-The control is saved as 'control.png' and trajectories are saved as 'x_i.png' for i=1,2,3,4.
-
-## 2. Run comparison_lee_c.py'
-
-This file computes optimal control and the state trajectories generated based on
-
-A Computationally Efficient Hamilton-Jacobi-based Formula for State-Constrained Optimal Control Problems
-Donggun Lee, Claire J. Tomlin
-https://arxiv.org/abs/2106.13440
-
-Images of plots will be saved in the current directory.
-
-The control is saved as 'control_.png' and trajectories are saved as 'x_i_.png' for i=1,2,3,4.
 
 
 
