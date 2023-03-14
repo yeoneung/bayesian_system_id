@@ -50,8 +50,8 @@ This file will generate a set of 1000000 independent noises and save it 'asymmet
 Running files are  
 - Gaussian_3D.m
 - Gaussian_5D.m
-- Gaussian_mixtrue_3D.m
-- Gaussian_mixtrue_5D.m
+- Gaussian_mixture_3D.m
+- Gaussian_mixture_5D.m
 - asymmetric_3D.m
 - asymmetric_5D.m
 which are located in the path 'bayesian_system_id/Ours'. 
@@ -65,8 +65,8 @@ https://link.springer.com/article/10.1007/s10208-019-09426-y).
 Running files are  
 - Gaussian_3D.m
 - Gaussian_5D.m
-- Gaussian_mixtrue_3D.m
-- Gaussian_mixtrue_5D.m
+- Gaussian_mixture_3D.m
+- Gaussian_mixture_5D.m
 - asymmetric_3D.m
 - asymmetric_5D.m
 which are located in the path 'bayesian_system_id/LSE'. 
