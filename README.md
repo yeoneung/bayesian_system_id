@@ -33,6 +33,7 @@ $A={\left\lbrack \matrix{0 & -1  & 1 \cr 1 & 0 & 1 \cr 0 & 0 & 1} \right\rbrack}
 $A={\left\lbrack \matrix{1 & 0 & 0 & 0 & 0 \cr 1 & 0 & 1 & 0 & -1  \cr 0 & 0 & -1 & 0 & 1 \cr 1 & 1 & 1 & 0 & 0 \cr 1 & 0 & -1 & 0 & 0 } \right\rbrack}$, 
 $B={\left\lbrack \matrix{0 & 0 & 0 & 0 & 0 \cr 1 & 0 & 0 & 0 & 0  \cr 0 & 0 & 0 & 0 & 0 \cr 1 & 0 & 1 & 0 & 0 \cr 1 & 0 & 0 & 0 & 0 } \right\rbrack}$
 
+
 ### Type of system noise
 Three different types of system noise are considered to test the performance of the algorithm.
 (i) Gaussian
@@ -43,6 +44,18 @@ For (i) and (ii), built-in random number generators in Matlab are used while we 
 ### - Comparison with other method
 We compare the performance of our algorithm with those proposed in [On the Sample Complexity of the Linear Quadratic Regulator](
 https://link.springer.com/article/10.1007/s10208-019-09426-y). 
+
+# Auxiliary functions
+
+We include all auxiliary functions in 'bayesian_system_id/auxiliary' which are called automatically once the user adds this folder to the path.
+
+- '(type_of_noise)_grad_log.m' computes the gradient of the potential with respect to the system parameter 
+ associated with the noise type indicated in the filename.
+- '(type_of_noise)_grad_log_w.m' computes the gradient of the potential with respect to 
+ associated with the noise type indicated in the filename.
+- '(type_of_noise)_hess_log.m' computes the hessian of the potential functions associated with the noise indicated in the filename.
+- 'Newton_method_(noise_type).m' implements the second-order Newton's method where (noise_type) is denoted by either 'as' for asymmetric noise or 'gm' for Gaussian mixture noise
+- 'Tr_Theta_to_theta.m' vectorizes the system parameter.
 
 # Running
 
@@ -63,10 +76,6 @@ noises.
 - Gaussian
 - Gaussian mixture
 - asymmetric
-
-
-
-
 
 
 
