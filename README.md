@@ -37,7 +37,7 @@ $B={\left\lbrack \matrix{0 & 0 & 0 & 0 & 0 \cr 1 & 0 & 0 & 0 & 0  \cr 0 & 0 & 0 
 Three different types of system noise are considered to test the performance of the algorithm.
 (i) Gaussian
 (ii) Gaussian mixture
-(iii) Asymmetric noise.
+(iii) asymmetric noise.
 
 For (i) and (ii), built-in random generators in Matlab is used while we synthesize (iii) based on Langevin Markov Chain Monte Carlo (MCMC).
 
