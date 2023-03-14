@@ -40,38 +40,33 @@ Three different types of system noise are considered to test the performance of 
 
 For (i) and (ii), built-in random number generators in Matlab are used while we synthesize (iii) based on Langevin Markov Chain Monte Carlo (MCMC).
 
+### - Comparison with other method
+We compare the performance of our algorithm with those proposed in [On the Sample Complexity of the Linear Quadratic Regulator](
+https://link.springer.com/article/10.1007/s10208-019-09426-y). 
+
 # Running
 
 #### - Asymmetric noise generators
 Running 'ULA_asymmetric_1D.m' generates a set of synthetic asymmetric noises based on Langevin Markov Chain Monte Carlo. 
 This file will generate a set of 1000000 independent noises and save it 'asymmetric_noise_1D.csv'. 
 
-#### - Ours
-Running files are  
-- Gaussian_3D.m
-- Gaussian_5D.m
-- Gaussian_mixture_3D.m
-- Gaussian_mixture_5D.m
-- asymmetric_3D.m
-- asymmetric_5D.m
-which are located in the path 'bayesian_system_id/Ours'. 
+#### - Before running 'main.m', you should add all folders (LSE, Ours, assymmetric_noise_generator, auxiliary) to the path.
+The output will be plots for the error and the data is saved as csv file in the current directory.
 
-Running each m-file will provide an error for estimation corresponding to the type of noise indicated in the filename.
+(i) stabilizable system parameters in 3D and 5D with 
+- Gaussian
+- Gaussian mixture
+- asymmetric
+noises.
 
-#### - LSE
-We compare the performance of our algorithm with those proposed in [On the Sample Complexity of the Linear Quadratic Regulator](
-https://link.springer.com/article/10.1007/s10208-019-09426-y). 
+(ii) unstabilizable system parameters in 3D, 5D
+- Gaussian
+- Gaussian mixture
+- asymmetric
 
-Running files are  
-- Gaussian_3D.m
-- Gaussian_5D.m
-- Gaussian_mixture_3D.m
-- Gaussian_mixture_5D.m
-- asymmetric_3D.m
-- asymmetric_5D.m
-which are located in the path 'bayesian_system_id/LSE'. 
 
-Running each m-file will provide an error for estimation corresponding to the type of noise indicated in the filename.
+
+
 
 
 
