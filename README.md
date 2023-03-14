@@ -1,4 +1,4 @@
-#  On Bayesian Identification of Linear Non-Gaussian Systems: Tractable Algorithm and Concentration Bound
+# On Stabilizability-Independent Asymptotic Concentration Bounds for Bayesian Identification of Linear Non-Gaussian Systems
 
 This document provides Matlab codes together with explicit setup for the experiments 
 whose result is reported in the paper above titled. The code is written based on Matlab2021b.
