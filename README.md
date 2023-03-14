@@ -1,7 +1,7 @@
 #  On Bayesian Identification of Linear Non-Gaussian Systems: Tractable Algorithm and Concentration Bound
 
 This document provides Matlab codes together with explicit setup for the experiments 
-whose result is reported in the the paper above titled. The code is written based on Matlab2021b.
+whose result is reported in the paper above titled. The code is written based on Matlab2021b.
 
 # Scenarios covered
 
@@ -36,10 +36,9 @@ $B={\left\lbrack \matrix{0 & 0 & 0 & 0 & 0 \cr 1 & 0 & 0 & 0 & 0  \cr 0 & 0 & 0 
 ### Type of system noise
 Three different types of system noise are considered to test the performance of the algorithm.
 (i) Gaussian
-(ii) Gaussian mixture
-(iii) asymmetric noise.
+(ii) Gaussian mixture, and (iii) asymmetric noise.
 
-For (i) and (ii), built-in random generators in Matlab is used while we synthesize (iii) based on Langevin Markov Chain Monte Carlo (MCMC).
+For (i) and (ii), built-in random number generators in Matlab are used while we synthesize (iii) based on Langevin Markov Chain Monte Carlo (MCMC).
 
 # Running
 
