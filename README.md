@@ -66,15 +66,14 @@ This file will generate a set of 1000000 independent noises and save it 'asymmet
 The output will be plots for the error, and the data is saved as csv file in the current directory.
 
 (i) stabilizable system parameters in 3D and 5D with 
-- Gaussian
-- Gaussian mixture
-- asymmetric
-noises.
+- Gaussian noise
+- Gaussian mixture noise
+- asymmetric noise
 
 (ii) unstabilizable system parameters in 3D, 5D
-- Gaussian
-- Gaussian mixture
-- asymmetric
+- Gaussian noise
+- Gaussian mixture noise
+- asymmetric noise
 
 
 
