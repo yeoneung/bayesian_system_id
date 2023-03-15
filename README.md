@@ -51,9 +51,8 @@ We include all auxiliary functions in 'bayesian_system_id/auxiliary' which are c
 
 - '(type_of_noise)_grad_log.m' computes the gradient of the potential with respect to the system parameter 
  associated with the noise type indicated in the filename.
-- '(type_of_noise)_grad_log_w.m' computes the gradient of the potential with respect to 
- associated with the noise type indicated in the filename.
-- '(type_of_noise)_hess_log.m' computes the hessian of the potential functions associated with the noise indicated in the filename.
+- '(type_of_noise)_grad_log_w.m' computes the gradient of the potential with respect to the noise variable indicated in the filename.
+- '(type_of_noise)_hess_log.m' computes the Hessian of the potential functions associated with the noise indicated in the filename.
 - 'Newton_method_(noise_type).m' implements the second-order Newton's method where (noise_type) is denoted by either 'as' for asymmetric noise or 'gm' for Gaussian mixture noise
 - 'Tr_Theta_to_theta.m' vectorizes the system parameter.
 
