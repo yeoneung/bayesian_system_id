@@ -63,7 +63,7 @@ Running 'ULA_asymmetric_1D.m' generates a set of synthetic asymmetric noises bas
 This file will generate a set of 1000000 independent noises and save it 'asymmetric_noise_1D.csv'. 
 
 #### - Before running 'main.m', you should add all folders (LSE, Ours, assymmetric_noise_generator, auxiliary) to the path.
-The output will be plots for the error and the data is saved as csv file in the current directory.
+The output will be plots for the error, and the data is saved as csv file in the current directory.
 
 (i) stabilizable system parameters in 3D and 5D with 
 - Gaussian
