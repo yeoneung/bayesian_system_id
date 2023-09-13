@@ -1,4 +1,4 @@
-# On Stabilizability-Independent Asymptotic Concentration Bounds for Bayesian Identification of Linear Non-Gaussian Systems
+# On concentration bounds for Bayesian identification of linear non-Gaussian systems
 
 This document provides Matlab codes together with explicit setup for the experiments 
 whose result is reported in the paper above titled. The code is written based on Matlab2021b.
