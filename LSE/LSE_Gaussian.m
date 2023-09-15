@@ -1,4 +1,4 @@
-function[] = LSE_gaussian(A,B,n,m,T,N,interval)
+function[] = LSE_gaussian_mixture(A,B,n,m,T,N,interval)
 %n = state dimension
 %m = control dimension
 %T = Time horizon
@@ -8,8 +8,22 @@ error = zeros(T/interval,1);
 
 Theta_true = [A,B]';
 
+% Gaussian mixture setting
+if n==3
+    gm_a = [1/4,1/4,1/4]';
+    mu = [gm_a';-gm_a'];
+    r=1;
+    cov = [r,r,r];
+else
+    gm_a = [1/4,1/4,1/4,1/4,1/4]';
+    mu = [gm_a';-gm_a'];
+    r=1;
+    cov = [r,r,r,r,r];
+end
+gm = gmdistribution(mu,cov);  
+
 data = {};
-state_data = zeros(N,n);
+state_data = zeros(N,n);  
 
 %main algorithm
 for t = interval:interval:T
@@ -22,15 +36,13 @@ for t = interval:interval:T
             u = mvnrnd(zeros(n,1),1*eye(n))';
 
             %Gaussian noise
-            w = mvnrnd(zeros(n,1),1*eye(n))';
-           
+            w = random(gm)';           
+
             x_prime = A*x + B*u + w;
-                            
-            if j ==interval
-               
+                       
+            if j ==interval              
                 data{end+1} = {x;u;x_prime;w};
-            end
-            
+            end            
             x = x_prime;
         end
         state_data(i,:) = x';
@@ -71,12 +83,12 @@ figure
 hold on
 x = linspace(interval,T,T/interval);
 plot(x,error(1:T/interval),'r-.')
-leg = legend('Gaussian');
+leg = legend('Gaussian_mixture');
 set(leg,'Fontsize',10)
 
 xlabel('Horizon','Fontsize',16)
 ylabel('$|\theta-\theta_*|/|\theta_*|$','Interpreter','latex')
 save_time = [datestr(now,'mmmm dd, yyyy HH:MM:SS.FFF AM')];
-FileName = "LSE_Gaussian-"+string(n)+"D_"+save_time+".csv";
-writematrix(error,FileName);
+FileName = "LSE_Gaussian_mixture-"+string(n)+"D_"+save_time+".csv";
+writematrix(error,'FileName');
 end
