@@ -72,5 +72,5 @@ xlabel('Horizon','Fontsize',16)
 ylabel('$|\theta-\theta_*|$','Interpreter','latex')
 save_time = [datestr(now,'mmmm dd, yyyy HH:MM:SS.FFF AM')];
 FileName = "Our_Gaussian_mixture-"+string(n)+"D_"+save_time+".csv";
-writematrix(error,FileName);
+writematrix(error,'FileName');
 end
